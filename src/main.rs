@@ -13,7 +13,7 @@ fn main() {
         let mut guess = String::new(); // create new String instance
 
         io::stdin()
-            .read_line(&mut guess)
+            .read_line(&mut guess) // give reference to guess (pointer?)
             .expect("Failed to read line");
 
         let guess = match guess.trim().parse::<u32>() { // parse returns Result type (Ok, Err)
